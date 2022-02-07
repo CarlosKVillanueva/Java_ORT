@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>88</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Padron
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1304</x>
+      <y>304</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Fecha
+--
+- dia: int
+- mes: int
+- anio: int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1304</x>
+      <y>88</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Provincia
+--
+- nombre: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>88</y>
+      <w>312</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Escuela
+--
+- nombre: String
+--
++ designarPresidenteDeMesa(Mesa, Persona): void
+- quitarPersonaDeMesa(Persona): void
++ obtenerInforme(): ArrayList&lt;PadronMesa&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>88</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Domicilio
+--
+- calle: String
+- codigoPostal: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>928</x>
+      <y>312</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Persona
+--
+- dni: String
+- nombre: String
+- apellido: String
+
+--
++ getNombreApellido(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1304</x>
+      <y>488</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Genero
+--
++ FEMENINO
++ MASCULINO
++ OTRO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>120</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- escuelas
+lt=&lt;-
+m1=*</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>352</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- personas
+lt=&lt;-
+m1=*</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>392</y>
+      <w>232</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- fechaNacimiento
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1016</x>
+      <y>456</y>
+      <w>304</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>- genero
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>360.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>120</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- domicilio
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1072</x>
+      <y>120</y>
+      <w>248</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- provincia
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>290.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1016</x>
+      <y>232</y>
+      <w>104</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>- domicilio
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>312</y>
+      <w>384</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Mesa
+--
+- numero: int
+
+--
++ asignarPresidente(Persona): void
++ quitarPersona(Persona): boolean
+- quitarPresidente(Persona): void
++ obtenerPadronMesa(ArrayList&lt;PadronMesa&gt;): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>232</y>
+      <w>80</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>- mesas
+lt=&lt;-
+m1=*</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>64</x>
+      <y>312</y>
+      <w>304</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>PadronMesa
+--
+- numeroMesa: int
+- orden: int
+- dni: String
+- nombreApellido: String
+--
++ PadronMesa(int, int, String, String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>376</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>232</y>
+      <w>280</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;330.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>400</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>- presidente
+lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

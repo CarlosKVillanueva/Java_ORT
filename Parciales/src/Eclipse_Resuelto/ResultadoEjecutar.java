@@ -1,0 +1,10 @@
+package Eclipse_Resuelto;
+
+public enum ResultadoEjecutar {
+	EJECUTAR_OK,
+	ERROR_INEXISTENTE,
+	ERROR_EN_EJECUCION,
+	ERROR_NO_COMPILA,
+	ERROR_NO_HAY_MAIN,
+	ERROR_NO_HAY_RAM
+}

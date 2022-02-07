@@ -1,0 +1,59 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>330</x><y>222</y><w>380</w><h>190</h></coordinates><panel_attributes>Cajero
+--
+__- EFECTIVO_INICIAL=500000__
+- nroSerie:int
+--
++ Cajero(int, Banco)
++ realizarExtraccion(int, int):Resultado
++ obtenerCantidadDeEfectivo():int
+- validarCuenta(int):Cuenta
+- obtenerMontoEnBilletes(int):ArrayList&lt;Billete&gt;
+- extraerBilletes(int, Cuenta)
+- recargarCajero(int):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>192</y><w>120</w><h>80</h></coordinates><panel_attributes>TipoOperacion
+--
++ EXTRACCION
++ DEPOSITO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>472</y><w>130</w><h>100</h></coordinates><panel_attributes>Billete
+--
+- valor:int
+- nroSerie:String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>12</y><w>270</w><h>130</h></coordinates><panel_attributes>Cuenta
+--
+- nroCuenta:int
+- saldo:double
+--
++ actualizarSaldo(TipoOperacion, int):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>392</y><w>240</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Estado&gt;&gt;
+Enum
+--
++ EXTRACCION_REALIZADA
++ SALDO_INSUFICIENTE
++ EXTRACCION_NO_REALIZADA
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>402</y><w>130</w><h>60</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>110;40;10;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>22</y><w>240</w><h>150</h></coordinates><panel_attributes>Banco
+--
+- nombre:String
+--
++ Banco(String)
++ buscarCuenta(int):Cuenta
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>102</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+- cajeros
+m1=0..n</panel_attributes><additional_attributes>90;120;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>162</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+- banco
+m1=1</panel_attributes><additional_attributes>10;10;10;130;100;130</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>52</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- cuentas
+m1=0..n</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>132</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>332</y><w>140</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- billetes
+m1=0..n</panel_attributes><additional_attributes>10;140;10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>262</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>100;10;100;50;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>472</y><w>240</w><h>100</h></coordinates><panel_attributes>Resultado
+--
+
+--
++ Resultado(Estado, ArrayList&lt;Billete&gt;)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>402</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>502</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- billetes
+m1=0..n</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>472</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- estado
+m1=1</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>132</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>

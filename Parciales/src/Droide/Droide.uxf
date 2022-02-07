@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>110</y>
+      <w>430</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Droide
+--
+
+-
+-autoRepararse():ResultadoReparacion
+-reemplazarPieza(Pieza, Pieza)
+-buscarPiezaOperativa(String):Pieza
+-getPiezaOperativa(String):Pieza
+-reemplazarPieza(Pieza,Pieza):void
+-obtenerResultadoReparacion(boolean):void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>110</y>
+      <w>380</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Pieza
+--
+-nombre:String
+
+-
+
++mismaPieza(String):boolean
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>130</y>
+      <w>350</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+-piezasOperativas
+</panel_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>190</y>
+      <w>350</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+-piezasNoOperativas
+</panel_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>480</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+ResultadoReparacion
+--
+_+COMPLETAMENTE_OPERATIVO_
+_+REPARACION_PARCIAL_
+_+REPARACION_IMPOSIBLE_
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>290</y>
+      <w>30</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>260</y>
+      <w>420</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+-droidesFueraServicio</panel_attributes>
+    <additional_attributes>150.0;10.0;200.0;10.0;200.0;140.0;10.0;140.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>760</x>
+      <y>490</y>
+      <w>510</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Tiene 3 listas,
+Una de Droides Fuera de Servicio
+Una de Piezas Operativas
+Una de Piezas No Operativas
+bg=dark_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

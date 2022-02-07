@@ -1,0 +1,6 @@
+package THP_YA1G_RESOLUCION_CATEDRA;
+
+public enum Resultado {
+    NO_EXISTE_TREN, CANT_VAGONES_INVALIDA, AGREGADO_OK
+
+}

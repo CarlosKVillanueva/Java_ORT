@@ -1,0 +1,49 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>11</y><w>370</w><h>190</h></coordinates><panel_attributes>Tester
+--
+
+--
++ ejecutarTesting(Aplicacion,ArrayList&lt;Prueba&gt;):ValorResultado
+- chequearResultadoPrueba(boolean, Prueba): boolean
+- calcularResultado(boolean, boolean): ValorResultado
+- agregarHistorico(ValorResultado, Aplicacion): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>11</y><w>210</w><h>190</h></coordinates><panel_attributes>Resultado
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>321</y><w>240</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ValorResultado
+--
+_+ PRUEBA_SUPERADA_
+_+ PRUEBA_SUPERADA_CON_FALLOS_
+_+ PRUEBA_NO_SUPERADA_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>71</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+- historico</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>251</y><w>180</w><h>190</h></coordinates><panel_attributes>Aplicacion
+--
+- nombre: String
+- version: String
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>191</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>251</y><w>190</w><h>190</h></coordinates><panel_attributes>Prueba
+--
+- stopper: boolean
+
+--
+- ejecutar(Aplicacion): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>191</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>501</y><w>260</w><h>140</h></coordinates><panel_attributes>Accion
+--
+- codigo: String
+--
++ probar(Aplicacion): ValorResultadoPaso</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>431</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- pasos</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>521</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ValorResultadoPaso
+--
+_+ OK_
+_+ FALLO_
+_+ TIMEOUT_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>561</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>111</y><w>240</w><h>230</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>220;210;220;140;110;140;110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>191</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- valorResultado</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>381</y><w>240</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>220;140;220;80;90;80;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>431</y><w>110</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;140;90;140</additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>80</y><w>830</w><h>630</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;360;10;610;810;610;810;10;680;10</additional_attributes></element></diagram>

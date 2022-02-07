@@ -1,0 +1,34 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>90</x><y>60</y><w>210</w><h>190</h></coordinates><panel_attributes>Juego
+--
+_- TOTAL_RONDAS: int = 10_
+_- DISTANCIA_TOTAL: int = 150_
+--
++ jugar(): Resultado
+- procesarLuzVerde(): void
+- procesarLuzRoja(): void
+- procesarUltimaLuzRoja(): void
+- calcularResultado(): Resultado
+- jugadorGanador(Jugador): void
+- jugadorEliminado(Jugador): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>60</y><w>250</w><h>190</h></coordinates><panel_attributes>Jugador
+--
+- identificador: int
+- distanciaRecorrida: int
+--
+- obtenerDistanciaRecorrida(): int
++ obtenerDistanciaTotalRecorrida(): int
++ estaEnMovimiento(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>380</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
++ UNICO_GANADOR
++ MENOS_DE_LA_MIDAD
++ MAS_DE_LA_MITAD
++ SIN_SOBREVIENTES</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>110</y><w>270</w><h>50</h></coordinates><panel_attributes>- jugadores
+lt=&lt;-
+m1=*</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>160</y><w>270</w><h>50</h></coordinates><panel_attributes>- ganadores
+lt=&lt;-
+m1=*</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>210</y><w>270</w><h>50</h></coordinates><panel_attributes>- eliminados
+lt=&lt;-
+m1=*</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>240</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,22 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>40</y><w>350</w><h>190</h></coordinates><panel_attributes>Droide
+--
+- modelo: String
+- numeroSerie: String
+
+--
+- autoRepararse(): ArrayList&lt;Pieza&gt;
+- buscarPiezaOperativa(String):Pieza
+- obtenerPiezaOperativa(String): Pieza
+- reemplazarPieza(int, Pieza): Pieza
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>40</y><w>210</w><h>190</h></coordinates><panel_attributes>Pieza
+--
+- nombre:String
+- operativa: boolean
+
+--
++ estaOperativa():boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>70</y><w>390</w><h>50</h></coordinates><panel_attributes>- piezas
+lt=&lt;-
+m1=*</panel_attributes><additional_attributes>370;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>150</y><w>390</w><h>180</h></coordinates><panel_attributes>- droidesFueraDeServicio
+lt=&lt;-
+m1=*</panel_attributes><additional_attributes>150;10;240;10;240;160;10;160;10;80</additional_attributes></element></diagram>

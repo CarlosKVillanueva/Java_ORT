@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>36</y>
+      <w>450</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Empresa
+--
+-nombre:String
+
+--
++agregarPaquete(double,double,String):boolean
+-buscarProvincia(String):Provincia
++cargarPaquetes():void
++reincorporarPaquetes():void
+-agregarPendiente(Paquete, Motivo):void
+-buscarCamion(Provincia):Camion
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>324</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Paquete
+--
+-peso:double
+-valor:double
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>198</y>
+      <w>108</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+- paquetes</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>324</y>
+      <w>297</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Provincia
+--
+-nombre:String
+-domicilio:String
+
+-
++mismaProvincia(String):boolean
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>963</x>
+      <y>36</y>
+      <w>414</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Camion
+--
+-patente:String
+-cargaMaxima:double
+-pesoCargaActual:double
+
+-
+-hayCapacidad(double):boolean
++mismaProvincia(Provincia):boolean
++guardarPaquete(Paquete):boolean
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>153</y>
+      <w>279</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+- provincias
+</panel_attributes>
+    <additional_attributes>180.0;190.0;180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>369</y>
+      <w>216</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- provincia</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>198</y>
+      <w>207</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- provincia</panel_attributes>
+    <additional_attributes>10.0;190.0;210.0;190.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>72</y>
+      <w>405</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+- camiones
+</panel_attributes>
+    <additional_attributes>430.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>198</y>
+      <w>810</w>
+      <h>387</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+- cargaPaquetes</panel_attributes>
+    <additional_attributes>10.0;280.0;120.0;280.0;120.0;410.0;880.0;410.0;880.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>585</y>
+      <w>324</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>RegistroPendiente
+--
+
+
+-
++RegistroPendiente(Paquete,Motivo)
+
++conMotivo(Motivo):boolean
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>108</y>
+      <w>207</w>
+      <h>567</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+- registrosPendientes</panel_attributes>
+    <additional_attributes>170.0;600.0;10.0;600.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>729</x>
+      <y>594</y>
+      <w>252</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Motivo
+-
+_+NO_HAY_CAMION_ASIGNADO_
+_+NO_HAY_LUGAR_
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>639</y>
+      <w>198</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- motivo</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>486</y>
+      <w>99</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- paquete</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>36</x>
+      <y>63</y>
+      <w>837</w>
+      <h>792</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>910.0;780.0;910.0;860.0;10.0;860.0;10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>

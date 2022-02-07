@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>70</y>
+      <w>440</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Gimnasio
+--
+-razonSocial:String
+-cantSocios:int
+
+--
++Gimnasio(String)
+
++inscribirSocio(int,Sting,int,double):Resultado
+-buscarSocio(int):Socio
++quitarSocio(int):void
++ponerMoroso(int):void
++listarDeudoresCategoria(double,int):void
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>70</y>
+      <w>130</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoDeuda
+--
+_+NORMAL_
+_+MOROSO_
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>70</y>
+      <w>300</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Socio
+--
+-dni:int
+-nombre:String
+-categoria:int
+-deuda:double
+--
++Socio(int,String,int,double)
+
++mismoDni(int):boolean
++esDeudor():boolean
++getDeuda():double
++getCategoria():int
++setSocio(Estado):boolean
+
++toString():String
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>150</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+-socios</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>150</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+-estado
+</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>20</y>
+      <w>820</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>800.0;50.0;800.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>370</y>
+      <w>290</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
+_+EL_SOCIO_YA_EXISTE_
+_+SOCIO_AGREGADO_CON_EXISTO_
+_+SOCIO_DADO_DE_BAJA_
+_+SOCIO_DEUDOR_
+_+SOCIO_INEXISTENTE_
+_+SE_PUDO_CAMBIAR_EL_ESTADO_
+_+NO_SE_PUDO_CAMBIAR_EL_ESTADO_
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>280</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

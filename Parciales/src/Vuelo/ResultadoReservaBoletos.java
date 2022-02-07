@@ -1,0 +1,5 @@
+package Vuelo;
+
+public enum ResultadoReservaBoletos {
+    ERROR_AVION_COMPLETO, ERROR_YA_TIENE_PASAJE, ERROR_ASIENTO_CONTIGUO_OCUPADO, RESERVA_CONFIRMADA
+}

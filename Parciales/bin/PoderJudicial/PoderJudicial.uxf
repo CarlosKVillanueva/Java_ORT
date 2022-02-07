@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>135</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Padron
+--
++Padron()
+bg=dark_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>126</y>
+      <w>432</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Escuela
+--
+- nombre: String
+- cantMesas: int
+--
++Escuela(String, int, Domicilio)
++designarPresidenteDeMesa(Mesa, Votante):void
++obtenerInforme():ArrayList&lt;InformeMesa&gt;
++quitarPresidente(Persona):void
+
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>171</y>
+      <w>243</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- escuelas
+m1=0..n</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>27</x>
+      <y>423</y>
+      <w>306</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Domicilio
+--
+- calle: String
+- codigoPostal: int
+--
++Domicilio(String, int, String)
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>288</y>
+      <w>270</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- domicilio
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>135</y>
+      <w>342</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Mesa
+--
+- numeroMesa: int
+
+--
++Mesa(int)
++ asignarPresidente(Persona)
++ quitarPersona(Persona):boolean
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>477</y>
+      <w>405</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Votante
+--
+- nombre: String
+- apellido: String
+- dni: String
+- esPresidente: boolean
+--
++ Votante(String, String, String, String, Genero)
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1035</x>
+      <y>297</y>
+      <w>117</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- votantes
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>189</y>
+      <w>189</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- mesas
+m1=0..n</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>540</y>
+      <w>684</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- domicilio
+m1=1</panel_attributes>
+    <additional_attributes>10.0;20.0;740.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>675</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Genero
+--
+_-MASCULINO_
+_-FEMENINO_
+_-OTRO_
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>639</y>
+      <w>234</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- genero
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;140.0;240.0;140.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>387</y>
+      <w>198</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>InformeMesa
+--
+- numeroMesa: int
+- numeroOrden: int
+- dni: String
+- apellido: String
+- nombre: String
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>477</y>
+      <w>369</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>315</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>297</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;140.0;410.0;140.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>27</x>
+      <y>693</y>
+      <w>306</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Domicilio
+--
+- calle: String
+- codigoPostal: int
+- provincia: String
+--
++Domicilio(String, int, String)
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>585</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- provincia</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1161</x>
+      <y>765</y>
+      <w>225</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Fecha
+--
++ Fecha (int, int, int)
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1233</x>
+      <y>639</y>
+      <w>117</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+- fechaNac</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1161</x>
+      <y>297</y>
+      <w>135</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- presidente
+m1=0..1</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

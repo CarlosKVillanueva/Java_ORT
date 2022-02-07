@@ -1,0 +1,62 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>60</y><w>340</w><h>190</h></coordinates><panel_attributes>Empresa
+--
+- nombre: String
+
+--
++ asignarMaquinista(Tren,Maquinista):boolean
++ asignarMaquinistaLibre(Tren):boolean
+- buscarUltimoMaquinistaLibre():Maquinista
++ informeTrenes()ArrayList&lt;Informe&gt;
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>60</y><w>210</w><h>190</h></coordinates><panel_attributes>Vagon
+--
+- nroSerie: String
+- enReparacion: boolean
+--
++ sosElTipo(TipoVagon): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>60</y><w>260</w><h>190</h></coordinates><panel_attributes>Tren
+--
+_- FORMACION_CLASICA: int = 8_
+_- PARTIDA: String = "Avellaneda 1243"_
+- destino: String
+
+--
++ tenesMaquinista(): boolean
++ asignarMaquinista(Maquinista): void
++ dameCantidadDeVagones(TipoVagon):int
++ getNroSerieLocomotora(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>350</y><w>210</w><h>190</h></coordinates><panel_attributes>Maquinista
+--
+- nombre: String
+- dni: String
+--
++ Maquinista(String,String)
++ estasLibre():boolean
++ asignarTren(Tren):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>350</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoVagon
+--
+_+ LOCOMOTORA_
+_+ PASAJERO_
+_+ CARGA_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>240</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- tipoVagon</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>120</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- vagones</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>120</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- trenes</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>0</y><w>630</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- vagonesLibres</panel_attributes><additional_attributes>590;60;590;20;10;20;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>240</y><w>100</w><h>210</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- maquinistas</panel_attributes><additional_attributes>80;180;10;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>Informe
+--
+- nroSerie: String
+- cantVagonPasajero: int
+- cantVagonCarga: int
+
+--
++ Informe(String,int,int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>520</y><w>720</w><h>70</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- tipoVagon</panel_attributes><additional_attributes>690;20;690;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>240</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>240</y><w>920</w><h>390</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>900;300;900;370;10;370;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>240</y><w>140</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- maquinistaAsigando</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>240</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+- trenAsigando</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>240</y><w>150</w><h>250</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;230;10;230;10;10</additional_attributes></element></diagram>
